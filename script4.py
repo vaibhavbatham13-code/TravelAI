@@ -1,7 +1,7 @@
 
 from typing import TypedDict
 from langgraph.graph import StateGraph
-from langchain_openai import ChatopenAI
+from langchain_openai import ChatOpenAI
 import requests
 llm = ChatOpanAI(model="gpt-4o-mini",temperature=0)
 class TravelState(TypedDict):
