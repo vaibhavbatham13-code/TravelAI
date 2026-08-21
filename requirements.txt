@@ -2,3 +2,4 @@ streamlit
 langgraph
 langchain
 langchain-openai
+langchain-ollama
