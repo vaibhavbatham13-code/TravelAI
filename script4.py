@@ -1,9 +1,9 @@
 
 from typing import TypedDict
 from langgraph.graph import StateGraph
-from langchain_ollama import ChatOllama
+from langchain_openai import ChatopenAI
 import requests
-llm = ChatOllama(model="llama3.2",temperature=0)
+llm = ChatOpanAI(model="gpt-4o-mini",temperature=0)
 class TravelState(TypedDict):
         destination: str
         days: int
