@@ -4,7 +4,7 @@ from langgraph.graph import StateGraph
 from langchain_openai import ChatOpenAI
 import requests
 import streamlit as st
-llm = ChatOpanAI(
+llm = ChatOpenAI(
   model="gpt-4o-mini",temperature=0,
                  api_key=st.secrets["OPENAI_API_KEY"])
 class TravelState(TypedDict):
