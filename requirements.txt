@@ -1,7 +1,7 @@
 streamlit
 langgraph
 langchain
-langchain-openai
+langchain-google-genai
 langchain-ollama
 openai
 requests
