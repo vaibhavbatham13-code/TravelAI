@@ -1,12 +1,12 @@
 
 from typing import TypedDict
 from langgraph.graph import StateGraph
-from langchain_openai import ChatOpenAI
+from langchain_google_genai import ChatGoogleGenerativeAI
 import requests
 import streamlit as st
-llm = ChatOpenAI(
-  model="gpt-4o-mini",temperature=0,
-                 api_key=st.secrets["OPENAI_API_KEY"])
+llm = ChatGoogleGenerativeAI(
+  model="gemini-2.5-flash",temperature=0,
+                 "Google_API_key"=st.secrets["Google_API_KEY"])
 class TravelState(TypedDict):
         destination: str
         days: int
