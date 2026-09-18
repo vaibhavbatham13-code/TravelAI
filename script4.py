@@ -5,7 +5,7 @@ from langchain_google_genai import ChatGoogleGenerativeAI
 import requests
 import streamlit as st
 llm = ChatGoogleGenerativeAI(
-  model="gemini-2.5-flash",temperature=0,
+  model="gemini-3.6-flash",temperature=0,
                  google_api_key=st.secrets["GOOGLE_API_KEY"])
 class TravelState(TypedDict):
         destination: str
