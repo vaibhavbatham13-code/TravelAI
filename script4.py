@@ -154,28 +154,6 @@ graph.set_finish_point("review_agent")
 
 app = graph.compile()
 
-result = app.invoke({
-        "destination": "Goa",
-            "days": 4,
-"budget": 100000,
-"travel_style": "Budget",
-"interests": "Beaches,History, Nature",
-"weather": "",
-"destination_plan": "",
-"itinerary_plan": "",    #
-"budget_plan": "",
-"final_plan": ""
-})
-
-print("\n===== FINAL TRAVEL PLAN =====")
-print("destination",result["destination"])
-print("Days:",result["days"])
-print("Budget:",result["budget"])
-print("\nDestination Plan:\n",result["destination_plan"])
-print("\nItinerary:\n",result["itinerary_plan"])
-print("\nBudget Plan:\n",result["budget_plan"])
-print("\nFinal Plan:\n",result["final_plan"])
-#print(get_weather("Jaipur"))
 
 
 
