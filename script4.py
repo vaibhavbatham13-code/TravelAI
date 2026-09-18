@@ -6,7 +6,7 @@ import requests
 import streamlit as st
 llm = ChatGoogleGenerativeAI(
   model="gemini-2.5-flash",temperature=0,
-                 google_api_key=st.secrets["Google_API_KEY"])
+                 "GOOGLE_API_KEY"=st.secrets["GOOGLE_API_KEY"])
 class TravelState(TypedDict):
         destination: str
         days: int
