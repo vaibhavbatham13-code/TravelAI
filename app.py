@@ -296,5 +296,5 @@ st.markdown("</div>",
 st.markdown("---")
 
 st.caption(
-    " Powered by LangGraph + Llama 3.2 | "
+    " Powered by LangGraph + Gemini | "
     "Multi_Agents AI Travel Planning System")
