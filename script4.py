@@ -81,7 +81,13 @@ def destination_agent(state: TravelState):
     Travel style: {state['travel_style']}
     Interests: {state['interests']}
     Recommended places that match these preferences.""")
-    return  {"destination_plan": response.content}
+    content = response.content
+
+    if isinstance(content,list):
+      content = "".join(item.get("text","") if isinstance(item, dict) else str(item)
+                        for item in content)
+
+    return{"destination_plan": content}
 
 def itinerary_agent(state: TravelState):
     response = llm.invoke(f"""Create a {state['days']}-day travel itinerary for {state['destination']}.
@@ -90,7 +96,14 @@ def itinerary_agent(state: TravelState):
     Budget:{state['budget']}
     Make the itinerary personalized to the travellers interests and travel style.
     include a balanced schedule for each day.""")
-    return {"itinerary_plan": response.content}
+    content = response.content
+
+    if isinstance(content,list):
+      content = "".join(item.get("text","")
+                        if isinstance(item,dict)
+                        else str(item)
+                        for item in content)
+      return {"itinerary_plan":content}
 
 def budget_agent(state: TravelState):
     budget = state["budget"]
